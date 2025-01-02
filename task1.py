@@ -7,7 +7,7 @@ def get_days_from_today(date: str) -> int:
         current_date = datetime.today().date()
         difference = (target_date - current_date).days
         return difference
-    except Exception as e:
+    except ValueError as e:
         print(f"Date processing error: {e}")
         return 0
     
